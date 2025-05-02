@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Concepts | DAA Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+        <div class="toggle-ball"></div>
+    </div>
+
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <div class="logo-icon"><i class="fas fa-code-branch"></i></div>
+            <span>Algorithm Portfolio</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="concepts.html" class="active"><i class="fas fa-brain"></i> Concepts</a></li>
+                <li><a href="lab.html"><i class="fas fa-flask"></i> Lab Work</a></li>
+                <li><a href="conclusion.html"><i class="fas fa-graduation-cap"></i> Conclusion</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Concepts Hero -->
+    <section class="page-hero">
+        <div class="hero-content">
+            <h1>Core <span class="gradient-text">Algorithmic</span> Concepts</h1>
+            <p class="subtitle">A comprehensive exploration of algorithm design paradigms and techniques</p>
+        </div>
+    </section>
+
+    <!-- Concepts Intro -->
+    <section class="section">
+        <div class="concepts-intro">
+            <p>
+                The Design and Analysis of Algorithms course equips us with tools to design efficient algorithms, 
+                analyze their performance, and solve computational problems using different strategies. This 
+                comprehensive overview explores the fundamental paradigms and techniques that form the backbone 
+                of modern algorithm design.
+            </p>
+            
+            <div class="concept-nav">
+                <a href="#basic-techniques" class="concept-nav-item">
+                    <div class="concept-icon"><i class="fas fa-code"></i></div>
+                    <span>Basic Techniques</span>
+                </a>
+                <a href="#divide-conquer" class="concept-nav-item">
+                    <div class="concept-icon"><i class="fas fa-sitemap"></i></div>
+                    <span>Divide & Conquer</span>
+                </a>
+                <a href="#greedy" class="concept-nav-item">
+                    <div class="concept-icon"><i class="fas fa-forward"></i></div>
+                    <span>Greedy Algorithms</span>
+                </a>
+                <a href="#dynamic-programming" class="concept-nav-item">
+                    <div class="concept-icon"><i class="fas fa-table"></i></div>
+                    <span>Dynamic Programming</span>
+                </a>
+                <a href="#backtracking" class="concept-nav-item">
+                    <div class="concept-icon"><i class="fas fa-undo"></i></div>
+                    <span>Backtracking</span>
+                </a>
+                <a href="#graph-algorithms" class="concept-nav-item">
+                    <div class="concept-icon"><i class="fas fa-project-diagram"></i></div>
+                    <span>Graph Algorithms</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Concept Sections -->
+    <section class="concept-sections">
+        <!-- Basic Techniques -->
+        <div id="basic-techniques" class="concept-section">
+            <div class="concept-header">
+                <div class="concept-number">01</div>
+                <h2>Introduction to Algorithms & Basic Techniques</h2>
+            </div>
+            <div class="concept-content">
+                <p>
+                    We started with understanding what algorithms are and how to evaluate their efficiency using 
+                    recurrence relations and Big-O notation.
+                </p>
+                <ul class="algorithm-list">
+                    <li>
+                        <div class="algorithm-name">Insertion Sort</div>
+                        <div class="algorithm-desc">Shifts elements to place values in order. Good for small datasets.</div>
+                        <div class="complexity">Time Complexity: O(n²)</div>
+                    </li>
+                    <li>
+                        <div class="algorithm-name">Bubble Sort</div>
+                        <div class="algorithm-desc">Compares adjacent elements repeatedly.</div>
+                        <div class="complexity">Time Complexity: O(n²)</div>
+                    </li>
+                    <li>
+                        <div class="algorithm-name">Linear Search</div>
+                        <div class="algorithm-desc">Sequentially checks each element in the list.</div>
+                        <div class="complexity">Time Complexity: O(n)</div>
+                    </li>
+                </ul>
+                <div class="concept-note">
+                    <h4>Insertion Sort Visualization</h4>
+                    <div class="code-block">
+                        <pre>
+Consider array: [5, 2, 4, 6, 1, 3]
+Pass 1: [2, 5, 4, 6, 1, 3]
+Pass 2: [2, 4, 5, 6, 1, 3]
+Pass 3: [2, 4, 5, 6, 1, 3]
+Pass 4: [1, 2, 4, 5, 6, 3]
+Pass 5: [1, 2, 3, 4, 5, 6]</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Divide and Conquer -->
+        <div id="divide-conquer" class="concept-section">
+            <div class="concept-header">
+                <div class="concept-number">02</div>
+                <h2>Divide and Conquer</h2>
+            </div>
+            <div class="concept-content">
+                <p>
+                    This paradigm breaks a problem into smaller parts, solves them recursively, and merges results. 
+                    The "divide and conquer" technique leads to efficient algorithms for a wide range of problems.
+                </p>
+                <ul class="algorithm-list">
+                    <li>
+                        <div class="algorithm-name">Binary Search</div>
+                        <div class="algorithm-desc">Efficient for sorted data.</div>
+                        <div class="complexity">O(log n)</div>
+                    </li>
+                    <li>
+                        <div class="algorithm-name">Merge Sort</div>
+                        <div class="algorithm-desc">Uses recursion and merging.</div>
+                        <div class="complexity">O(n log n)</div>
+                    </li>
+                    <li>
+                        <div class="algorithm-name">Quick Sort</div>
+                        <div class="algorithm-desc">Partition-based sorting. Fast on average.</div>
+                        <div class="complexity">Avg: O(n log n), Worst: O(n²)</div>
+                    </li>
+                    <li>
+                        <div class="algorithm-name">Strassen's Matrix Multiplication</div>
+                        <div class="algorithm-desc">Reduces complexity from O(n³) to O(n^2.81).</div>
+                        <div class="complexity">O(n^2.81)</div>
+                    </li>
+                    <li>
+                        <div class="algorithm-name">Karatsuba Algorithm</div>
+                        <div class="algorithm-desc">Fast multiplication of large integers.</div>
+                        <div class="complexity">O(n^log₂3)</div>
+                    </li>
+                </ul>
+                <div class="concept-note">
+                    <h4>Merge Sort vs Quick Sort</h4>
+                    <p><strong>Merge Sort</strong> guarantees O(n log n) performance in all cases but requires extra memory.</p>
+                    <p><strong>Quick Sort</strong> is typically faster in practice due to better cache locality and less overhead, but can degrade to O(n²) in worst case scenarios.</p>
+                    <p>Partition example for Quick Sort with array [3, 8, 2, 5, 1, 4, 7, 6] and pivot=4:</p>
+                    <p>After partition: [3, 2, 1, <strong>4</strong>, 8, 5, 7, 6]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Greedy Algorithms -->
+        <div id="greedy" class="concept-section">
+            <div class="concept-header">
+                <div class="concept-number">03</div>
+                <h2>Greedy Algorithms</h2>
+            </div>
+            <div class="concept-content">
+                <p>
+                    Make the best choice at each step hoping for an overall optimal solution. While not always 
+                    guaranteed to find the global optimum, greedy algorithms are efficient for many problems.
+                </p>
+                <ul class="algorithm-list">
+                    <li>
+                        <div class="algorithm-name">Kruskal's Algorithm</div>
+                        <div class="algorithm-desc">Uses Disjoint Set for MST.</div>
+                        <div class="complexity">O(E log E)</div>
+                    </li>
+                    <li>
+                        <div class="algorithm-name">Prim's Algorithm</div>
+                        <div class="algorithm-desc">Grows MST from a starting vertex.</div>
+                        <div class="complexity">O(E log V)</div>
+                    </li>
+                    <li>
+                        <div class="algorithm-name">Dijkstra's Algorithm</div>
+                        <div class="algorithm-desc">Finds shortest paths in weighted graphs.</div>
+                        <div class="complexity">O((V+E) log V)</div>
+                    </li>
+                    <li>
+                        <div class="algorithm-name">Huffman Coding</div>
+                        <div class="algorithm-desc">Creates optimal prefix codes for data compression.</div>
+                        <div class="complexity">O(n log n)</div>
+                    </li>
+                    <li>
+                        <div class="algorithm-name">Fractional Knapsack</div>
+                        <div class="algorithm-desc">Selects items with highest value-to-weight ratio.</div>
+                        <div class="complexity">O(n log n)</div>
+                    </li>
+                </ul>
+                <div class="concept-note">
+                    <h4>Fractional Knapsack Example</h4>
+                    <p>Items: [(value=60, weight=10), (value=100, weight=20), (value=120, weight=30)]</p>
+                    <p>Knapsack capacity: 50</p>
+                    <p>Value-to-weight ratios: [6, 5, 4]</p>
+                    <p>Solution: Take all of item 1, all of item 2, and 2/3 of item 3</p>
+                    <p>Total value: 60 + 100 + (120 × 2/3) = 240</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dynamic Programming -->
+        <div id="dynamic-programming" class="concept-section">
+            <div class="concept-header">
+                <div class="concept-number">04</div>
+                <h2>Dynamic Programming</h2>
+            </div>
+            <div class="concept-content">
+                <p>
+                    Overlapping subproblems and optimal substructure are solved by storing past results (memoization). 
+                    DP is powerful for optimization problems where brute force would be exponential.
+                </p>
+                <ul class="algorithm-list">
+                    <li>
+                        <div class="algorithm-name">Longest Common Subsequence (LCS)</div>
+                        <div class="algorithm-desc">Dynamic string comparison.</div>
+                        <div class="complexity">O(m×n)</div>
+                    </li>
+                    <li>
+                        <div class="algorithm-name">Matrix Chain Multiplication</div>
+                        <div class="algorithm-desc">Optimal parenthesis placement.</div>
+                        <div class="complexity">O(n³)</div>
+                    </li>
+                    <li>
+                        <div class="algorithm-name">0/1 Knapsack</div>
+                        <div class="algorithm-desc">Select items to maximize profit with a weight constraint.</div>
+                        <div class="complexity">O(n×W)</div>
+                    </li>
+                    <li>
+                        <div class="algorithm-name">Floyd-Warshall</div>
+                        <div class="algorithm-desc">All-pairs shortest paths.</div>
+                        <div class="complexity">O(V³)</div>
+                    </li>
+                    <li>
+                        <div class="algorithm-name">Edit Distance</div>
+                        <div class="algorithm-desc">Minimum operations to transform one string to another.</div>
+                        <div class="complexity">O(m×n)</div>
+                    </li>
+                </ul>
+                <div class="concept-note">
+                    <h4>LCS Example: "ABCBDAB" and "BDCABA"</h4>
+                    <div class="code-block">
+                        <pre>
+DP Table (Partial):
+   | "" | B  | D  | C  | A  | B  | A
+---+----+----+----+----+----+----+----
+"" | 0  | 0  | 0  | 0  | 0  | 0  | 0
+A  | 0  | 0  | 0  | 0  | 1  | 1  | 1
+B  | 0  | 1  | 1  | 1  | 1  | 2  | 2
+C  | 0  | 1  | 1  | 2  | 2  | 2  | 2</pre>
+                    </div>
+                    <p>Result: The LCS is "BCBA" with length 4</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Backtracking -->
+        <div id="backtracking" class="concept-section">
+            <div class="concept-header">
+                <div class="concept-number">05</div>
+                <h2>Backtracking</h2>
+            </div>
+            <div class="concept-content">
+                <p>
+                    Systematically tries all options and backtracks if a solution fails. Backtracking is essential 
+                    for solving constraint satisfaction problems and combinatorial optimization.
+                </p>
+                <ul class="algorithm-list">
+                    <li>
+                        <div class="algorithm-name">N-Queens</div>
+                        <div class="algorithm-desc">Place queens such that no two threaten each other.</div>
+                        <div class="complexity">O(n!)</div>
+                    </li>
+                    <li>
+                        <div class="algorithm-name">Subset Sum</div>
+                        <div class="algorithm-desc">Identify subsets with a given total.</div>
+                        <div class="complexity">O(2ⁿ)</div>
+                    </li>
+                    <li>
+                        <div class="algorithm-name">Hamiltonian Path</div>
+                        <div class="algorithm-desc">Find a path visiting each vertex exactly once.</div>
+                        <div class="complexity">O(n!)</div>
+                    </li>
+                    <li>
+                        <div class="algorithm-name">Graph Coloring</div>
+                        <div class="algorithm-desc">Assign colors to vertices with constraints.</div>
+                        <div class="complexity">O(m^n)</div>
+                    </li>
+                    <li>
+                        <div class="algorithm-name">Sudoku Solver</div>
+                        <div class="algorithm-desc">Common backtracking application.</div>
+                        <div class="complexity">O(9^(n²))</div>
+                    </li>
+                </ul>
+                <div class="concept-note">
+                    <h4>4-Queens Backtracking Solution</h4>
+                    <div class="code-block">
+                        <pre>
+. Q . .  
+. . . Q  
+Q . . .  
+. . Q .  </pre>
+                    </div>
+                    <p>This is one of the two valid solutions for the 4-Queens problem.</p>
+                    <p>Backtracking tries placing a queen in each column, then backtracks when attacks are detected.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Graph Algorithms -->
+        <div id="graph-algorithms" class="concept-section">
+            <div class="concept-header">
+                <div class="concept-number">06</div>
+                <h2>Graph Algorithms</h2>
+            </div>
+            <div class="concept-content">
+                <p>
+                    Graphs model complex systems like networks, cities, and social connections. From traversal to 
+                    pathfinding and network flow, graph algorithms are foundational in computer science.
+                </p>
+                <ul class="algorithm-list">
+                    <li>
+                        <div class="algorithm-name">DFS/BFS</div>
+                        <div class="algorithm-desc">Graph traversal techniques.</div>
+                        <div class="complexity">O(V+E)</div>
+                    </li>
+                    <li>
+                        <div class="algorithm-name">Dijkstra's Algorithm</div>
+                        <div class="algorithm-desc">Single-source shortest path.</div>
+                        <div class="complexity">O((V+E) log V)</div>
+                    </li>
+                    <li>
+                        <div class="algorithm-name">Bellman-Ford</div>
+                        <div class="algorithm-desc">Handles negative edge weights.</div>
+                        <div class="complexity">O(V×E)</div>
+                    </li>
+                    <li>
+                        <div class="algorithm-name">Floyd-Warshall</div>
+                        <div class="algorithm-desc">All-pairs shortest path using DP.</div>
+                        <div class="complexity">O(V³)</div>
+                    </li>
+                    <li>
+                        <div class="algorithm-name">Topological Sort</div>
+                        <div class="algorithm-desc">Linear ordering of vertices in a DAG.</div>
+                        <div class="complexity">O(V+E)</div>
+                    </li>
+                    <li>
+                        <div class="algorithm-name">Ford-Fulkerson</div>
+                        <div class="algorithm-desc">Maximum flow in a flow network.</div>
+                        <div class="complexity">O(E×max_flow)</div>
+                    </li>
+                </ul>
+                <div class="concept-note">
+                    <h4>Graph Traversals Comparison</h4>
+                    <p><strong>Depth-First Search (DFS):</strong> Explores as far as possible along a branch before backtracking. Useful for topological sorting, detecting cycles, and maze generation.</p>
+                    <p><strong>Breadth-First Search (BFS):</strong> Explores all neighbors at the current depth before moving to vertices at the next depth level. Ideal for finding shortest paths in unweighted graphs.</p>
+                    <p>For the same graph, DFS and BFS may produce different traversal orders!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Algorithm Complexity Comparison -->
+    <section class="section">
+        <div class="section-header">
+            <h2>Algorithm Complexity Comparison</h2>
+            <div class="underline"></div>
+        </div>
+        <p class="section-intro">
+            Understanding time and space complexity is crucial for algorithm selection. Below is a comparison of major algorithms we've studied.
+        </p>
+        <div class="table-container">
+            <table class="complexity-table">
+                <thead>
+                    <tr>
+                        <th>Algorithm</th>
+                        <th>Best Case</th>
+                        <th>Average Case</th>
+                        <th>Worst Case</th>
+                        <th>Space</th>
+                        <th>Stable</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Quick Sort</td>
+                        <td>O(n log n)</td>
+                        <td>O(n log n)</td>
+                        <td>O(n²)</td>
+                        <td>O(log n)</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Merge Sort</td>
+                        <td>O(n log n)</td>
+                        <td>O(n log n)</td>
+                        <td>O(n log n)</td>
+                        <td>O(n)</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Heap Sort</td>
+                        <td>O(n log n)</td>
+                        <td>O(n log n)</td>
+                        <td>O(n log n)</td>
+                        <td>O(1)</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Dijkstra's</td>
+                        <td>-</td>
+                        <td>O((V+E) log V)</td>
+                        <td>O((V+E) log V)</td>
+                        <td>O(V)</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Dynamic Programming</td>
+                        <td>-</td>
+                        <td>Problem-dependent</td>
+                        <td>Problem-dependent</td>
+                        <td>Often O(n²)</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="quote-block">
+            "Algorithmic thinking is not just about coding; it's about finding elegant solutions to complex problems through structured and analytical reasoning."
+        </div>
+    </section>
+
+    <!-- Lab Exercises CTA -->
+    <section class="section lab-brief">
+        <h2>💻 Lab Exercises Overview</h2>
+        <p>
+            Throughout the lab sessions, we coded many algorithms using C, reinforcing concepts with hands-on experience. 
+            These included recursive and iterative approaches, visualizing sorting methods, understanding graph traversal 
+            via adjacency lists, and implementing complex algorithms from scratch.
+        </p>
+        <p>
+            Our lab work focused on empirical analysis where we measured actual running times, compared theoretical 
+            complexities with practical performance, and optimized implementations for real-world scenarios.
+        </p>
+        <a href="lab.html" class="btn primary-btn">View All Lab Programs</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <div class="footer-logo">
+                    <i class="fas fa-code-branch"></i> Algorithm Portfolio
+                </div>
+                <p>
+                    This portfolio represents my journey through the Design and Analysis of Algorithms course, 
+                    showcasing both theoretical understanding and practical implementation skills.
+                </p>
+                <div class="contact">
+                    <span><i class="fas fa-envelope"></i> vg2632@srmist.edu.in</span>
+                    <span><i class="fas fa-phone"></i> +91-7868953592</span>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="concepts.html"><i class="fas fa-chevron-right"></i> Concepts</a></li>
+                    <li><a href="lab.html"><i class="fas fa-chevron-right"></i> Lab Exercises</a></li>
+                    <li><a href="conclusion.html"><i class="fas fa-chevron-right"></i> Conclusion</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h3>Connect With Me</h3>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/veerapandi-g-342388292/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/veera-crt/DAA-Portfolio" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:vg2632@srmist.edu.in"><i class="fas fa-envelope"></i></a>
+                </div>
+                <div class="newsletter">
+                    <h4>Stay Updated</h4>
+                    <form>
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Veerapandi | RA2311030010022 | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
